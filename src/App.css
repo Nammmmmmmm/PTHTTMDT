@@ -19,6 +19,7 @@ body{
 ::-webkit-scrollbar-thumb{background: #ccc !important;}
 ::-webkit-scrollbar-track{background: transparent !important;}
 
+.headerWrapper{border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px;}
 
 .headerWrapper .top-strip{padding: 8px 0px;}
 .headerWrapper .top-strip p{color: #fff; font-size: 12px; font-weight: 800;}
@@ -59,9 +60,13 @@ border-radius: 50%; color: #fff; width: 20px; height: 20px;}
 
 
 .locationModal .MuiPaper-elevation{padding: 25px; position: relative;}
+
 .locationModal .countryList{margin-bottom: 0px; max-height: 400px; overflow-y: scroll; overflow-x: hidden;}
 .locationModal .countryList li{width: 100%; list-style: none;}
 .locationModal .countryList li button{width: 100%; text-transform: capitalize !important; color: #000 !important; justify-content: flex-start !important; padding: 10px 20px !important;}
+
+.locationModal .countryList li button:hover{background: #f1f1f1;}
+.locationModal .countryList li button.active{background: #e2e2e2 !important;}
 
 .locationModal .close_{position: absolute; top: 20px; right: 20px; color: #000 !important; min-width: 40px !important; width: 40px !important; height: 40px !important; border-radius: 50%;}
 
