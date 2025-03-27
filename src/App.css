@@ -9,6 +9,7 @@ body{
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     /* background-color: #f5f5f5; */
+    color: rgba(0,0,0,0.8);
 }
 .bg-blue{ background: #233a95;}
 
@@ -17,6 +18,11 @@ body{
         max-width: 1200px;
     }
 }
+
+.cursor{cursor: pointer;}
+.text-light{color: #626262 !important;}
+.text-sml{font-size: 14px;}
+
 
 ::-webkit-scrollbar{width: 8px !important; height: 8px !important;}
 ::-webkit-scrollbar-thumb{background: #ccc !important;}
@@ -85,9 +91,22 @@ nav .navPart1 .catWrapper .sidebarNav{width: 100%; height: 0px; opacity: 0; back
 
 nav .navPart1 .catWrapper .sidebarNav.open{height: auto; opacity: 1; visibility: inherit;}
 
-nav .navPart1 .catWrapper .sidebarNav ul li{width: 100%; list-style: none; padding: 0px 15px;}
+nav .navPart1 .catWrapper .sidebarNav ul li{width: 100%; list-style: none; padding: 0px 10px;}
 nav .navPart1 .catWrapper .sidebarNav ul li button{color: #000; width: 100%; justify-content: flex-start; text-transform: capitalize !important;}
+
+nav .navPart1 .catWrapper .sidebarNav ul li button svg{font-size: 12px; opacity: 0.6;}
+
 nav .navPart1 .catWrapper .sidebarNav ul li button:hover{background: transparent !important;}
+
+nav .navPart1 .catWrapper .sidebarNav ul li{position: static;}
+nav .navPart1 .catWrapper .sidebarNav ul li .submenu{position: absolute; top: 0px; left: 105%; 
+width: 250px; height: 100%; background: #fff; z-index: 100; opacity: 0; visibility: hidden;
+transition: all 0.2s ease-in-out; border-left: 1px solid rgba(0,0,0,0.1); padding: 20px;}
+
+nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu{opacity: 1; visibility: inherit;
+left: 100%;}
+
+nav .navPart1 .catWrapper .sidebarNav ul li .submenu button{border-radius: 0px !important;}
 
 nav .allCatTab{background: #2bbef9; padding: 10px 15px !important; border-radius: 30px !important;}
 nav .allCatTab *{color: #fff;}
@@ -122,3 +141,52 @@ nav .navPart2 ul li:hover .submenu{opacity: 1; visibility: inherit; top: 100%;}
 
 .homeBannerSection .slick-arrow.slick-next::before{color: #fff; font-family: FontAwesome !important;}
 .homeBannerSection .slick-arrow.slick-prev::before{color: #fff; font-family: FontAwesome !important;}
+
+
+.homeProducts{padding: 25px 0px; width: 100%;}
+.homeProducts .banner{width: 100%; height: 300px; background: #f1f1f1; border-radius: 10px; overflow: hidden; position: relative;}
+
+.productRow .hd{ font-size: 25px; font-weight: 600;}
+
+
+.viewAllBtn{padding: 5px 25px !important; background: #fff; border: 1px solid rgba(0,0,0,0.1) !important;
+border-radius: 30px !important; color: #414141 !important; font-weight: 600;
+text-transform: capitalize !important;}
+
+.viewAllBtn svg{font-size: 20px;}
+
+
+.productItem{width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.1); cursor: pointer; position: relative;}
+.productItem .badge{display: inline-block; padding: 7px 10px; position: absolute; top: 10px;
+left: 10px; z-index: 100;}
+
+.productItem .info{padding: 15px;}
+.productItem .info h4{font-size: 15px; font-weight: 600;}
+
+.productItem .info .oldPrice{font-size: 16px; font-weight: bold; color: rgba(0,0,0,0.2); text-decoration: line-through;}
+.productItem .info .netPrice{font-size: 16px; font-weight: bold;}
+
+.productItem .actions{position: absolute; top: 20px; right: -100%; z-index: 1000; display: flex;
+flex-direction: column; gap: 10px; transition: all 0.3s ease-in-out;}
+.productItem .actions button{display: flex; align-items: center; justify-content: center; min-width: 40px
+!important; height: 40px !important; width: 40px !important; border: 1px solid rgba(0,0,0,0.1) !important; 
+border-radius: 50% !important; background: #fff !important;
+box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important; transition: all 0.0s !important;}
+
+    .productItem .actions button svg{color: #000 !important; opacity: 0.8;
+    pointer-events: none;font-size: 15px ;}
+
+    .productItem .actions button:hover{background: #233a95 !important;}
+    .productItem .actions button:hover svg{color: #fff !important;}
+
+    .productItem .imgWrapper{overflow: hidden;}
+    .productItem .imgWrapper img{transition: all 0.3s ease-in-out;}
+    .productItem .imgWrapper:hover .actions{opacity: 1; right: 10px;}
+    .productItem .imgWrapper:hover img{transform: scale(1.1);}
+
+.product_row .productItem{border-right: 1px solid transparent !important;}
+.product_row .swiper-slide:last-child .productItem{border: 1px solid rgba(0,0,0,0.1) !important}
+
+.swiper{padding-right: 1px !important;}
+
+badge-primary{background: #2bbef9; color: #fff;}
