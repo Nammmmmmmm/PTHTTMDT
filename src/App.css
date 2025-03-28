@@ -10,6 +10,7 @@ body{
     font-size: 14px;
     /* background-color: #f5f5f5; */
     color: rgba(0,0,0,0.8);
+    overflow-x: hidden;
 }
 .bg-blue{ background: #233a95;}
 
@@ -135,18 +136,25 @@ nav .navPart2 ul li:hover .submenu{opacity: 1; visibility: inherit; top: 100%;}
 
 .homeBannerSection{position: relative; overflow: hidden;}
 .homeBannerSection *{outline: none !important;}
-.homeBannerSection .slick-arrow{position: absolute; top: 45%; z-index: 100; display: flex; justify-content: center; align-items: center; width: 40px !important; height: 40px !important; background: #444444; border-radius: 100%; font-family: FontAwesome !important; font-weight: bold;}
-.homeBannerSection .slick-arrow.slick-next{right: 25px !important;}
-.homeBannerSection .slick-arrow.slick-prev{left: 25px !important;}
+.homeBannerSection .slick-arrow{position: absolute; top: 45%; z-index: 100; display: flex; justify-content: center; align-items: center; width: 40px !important; height: 40px !important; border-radius: 100%;  font-weight: bold; box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important;}
+.homeBannerSection .slick-arrow.slick-next{right: 35px !important;}
+.homeBannerSection .slick-arrow.slick-prev{left: 35px !important;}
 
-.homeBannerSection .slick-arrow.slick-next::before{color: #fff; font-family: FontAwesome !important;}
-.homeBannerSection .slick-arrow.slick-prev::before{color: #fff; font-family: FontAwesome !important;}
+.slick-next::before, .slick-prev:before{
+    color: #313131 !important;
+    opacity: 0.8;
+    font-size: 50px !important;
+}
+
+.homeBannerSection{cursor: pointer;}
+/* .homeBannerSection .slick-arrow.slick-next::before{color: #000;}
+.homeBannerSection .slick-arrow.slick-prev::before{color: #fff; } */
 
 
-.homeProducts{padding: 25px 0px; width: 100%;}
+.homeProducts{padding: 25px 0px; width: 90%; margin: 0 5%;}
 .homeProducts .banner{width: 100%; height: 300px; background: #f1f1f1; border-radius: 10px; overflow: hidden; position: relative;}
 
-.productRow .hd{ font-size: 25px; font-weight: 600;}
+.hd{ font-size: 25px; font-weight: 600; text-transform: uppercase;}
 
 
 .viewAllBtn{padding: 5px 25px !important; background: #fff; border: 1px solid rgba(0,0,0,0.1) !important;
@@ -167,7 +175,7 @@ left: 10px; z-index: 100;}
 .productItem .info .netPrice{font-size: 16px; font-weight: bold;}
 
 .productItem .actions{position: absolute; top: 20px; right: -100%; z-index: 1000; display: flex;
-flex-direction: column; gap: 10px; transition: all 0.3s ease-in-out;}
+flex-direction: column; gap: 10px; transition: all 0.5s ease-in-out;}
 .productItem .actions button{display: flex; align-items: center; justify-content: center; min-width: 40px
 !important; height: 40px !important; width: 40px !important; border: 1px solid rgba(0,0,0,0.1) !important; 
 border-radius: 50% !important; background: #fff !important;
@@ -187,6 +195,36 @@ box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important; t
 .product_row .productItem{border-right: 1px solid transparent !important;}
 .product_row .swiper-slide:last-child .productItem{border: 1px solid rgba(0,0,0,0.1) !important}
 
-.swiper{padding-right: 1px !important;}
+.product_row .swiper-button-prev,.product_row .swiper-button-next{ width: 40px; height: 40px; background: #fff !important; border-radius: 50% !important; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important; opacity: 0.6;}
 
-badge-primary{background: #2bbef9; color: #fff;}
+.product_row .swiper-button-prev{left: 2px !important;}
+.product_row .swiper-button-next{right: 5px !important;}
+
+.swiper{padding-right: 2px !important;}
+
+.product_row .swiper-button-prev::after,.product_row .swiper-button-next::after{
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #000;
+    padding: 10px !important;
+    
+}
+
+.badge-primary{background: #2bbef9; color: #fff;}
+
+.homeCat{padding: 35px 0px; margin: 0 5%;}
+.homeCat .swiper{overflow: inherit !important;}
+.homeCat .swiper .item{padding: 15px; width: 100%; height: auto; border-radius: 10px;}
+.homeCat .swiper .item img{width: 80%;}
+
+.homeCat .swiper-button-prev, .homeCat .swiper-button-next{top: -30px !important; width: 30px !important; height: 30px !important; color: black !important; background: #fff !important; border-radius: 50% !important; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;}
+.homeCat .swiper-button-prev{right: 68px !important; left: inherit !important;}
+
+.homeCat .swiper-button-prev::after, .homeCat .swiper-button-next::after{font-size: 12px !important;}
+
+.productRow2{flex-wrap: wrap; gap: 10px;}
+.productRow2 .productItem{width: 24%; overflow: hidden; border-right: 1px solid rgba(0,0,0,0.1) !important;}
+
+.bannerSec{gap: 15px;}
+
+.sticky{position: sticky; top: 10px; z-index: 100;}
