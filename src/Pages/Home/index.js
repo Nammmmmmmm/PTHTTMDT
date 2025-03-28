@@ -14,6 +14,9 @@ import HomeCat from "../../Components/HomeCat";
 
 import banner3 from "../../assets/images/banner3.jpg";
 import banner4 from "../../assets/images/banner4.jpg";
+import newLetterImg from "../../assets/images/coupon.png";
+import { IoMailOutline } from "react-icons/io5";
+
 
 const Home = () => {
   return (
@@ -111,7 +114,6 @@ const Home = () => {
                 <ProductItem />
                 <ProductItem />
                 <ProductItem />
-                <ProductItem />
               </div>
 
               <div className="d-flex mt-4 mb-5 bannerSec">
@@ -128,6 +130,40 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
+
+      <section className="newsLetterSection my-3 mb-3 d-flex align-items-center">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-6">
+              <p className="text-white mb-1">75% discount on your first order.</p>
+              <h4 className="text-white">Join our newsletter and get...</h4>
+              <p className="text-light">Join our email subscription now to get updates on<br></br> promotions and counpons.</p>
+
+
+
+              <form>
+                <IoMailOutline/>
+                <input type="text" placeholder="Enter your email address"/>
+                <Button className="btn">Subscribe</Button>
+              </form>
+            </div>
+
+            <div className="col-md-6">
+              <img src={newLetterImg} className="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
     </>
   );
 };
