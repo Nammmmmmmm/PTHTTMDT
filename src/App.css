@@ -91,9 +91,9 @@ border-radius: 50%; color: #fff; width: 20px; height: 20px;}
 .locationModal .countryList li button:hover{background: #f1f1f1;}
 .locationModal .countryList li button.active{background: #e2e2e2 !important;}
 
-.locationModal .close_{position: absolute; top: 20px; right: 20px; color: #000 !important; min-width: 40px !important; width: 40px !important; height: 40px !important; border-radius: 50%;}
+.close_{position: absolute !important; top: 20px; right: 20px; color: #000 !important; min-width: 40px !important; width: 40px !important; height: 40px !important; border-radius: 50%;}
 
-.locationModal .close_ svg{font-size: 22px;}
+.close_ svg{font-size: 22px;}
 
 nav{width: 86%; margin: 0 7%;} 
 
