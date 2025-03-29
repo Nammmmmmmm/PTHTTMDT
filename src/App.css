@@ -12,7 +12,7 @@ body{
     color: rgba(0,0,0,0.8);
     overflow-x: hidden;
 }
-.bg-blue{ background: #233a95;}
+.bg-blue{ background: #6d4aae;}
 
 @media (min-widght: 1300px){
     .container, .container-lg, .container-md, .container-sm, .container-xl {
@@ -25,7 +25,7 @@ body{
 
 button{text-transform: capitalize !important;}
 
-.btn-blue{background: #233a95 !important; color: #fff !important;
+.btn-blue{background: #6d4aae !important; color: #fff !important;
 text-transform: capitalize !important;}
 .btn-big{font-size: 15px !important; padding: 7px 30 x !important; min-width: auto !important;}
 .btn-round{border-radius: 30px !important;}
@@ -51,12 +51,12 @@ text-transform: capitalize !important;}
 .logoWrapper{width: 100%;}
 
 .headerWrapper .header .part2 .countryDrop{width: 170px; height: 60px; min-width: 170px; 
-    color: #000 !important;  border: 1px solid rgba(0,0,0,0.2) !important; border-radius: 7px !important;  padding: 10px 10px !important;}
+    color: #000 !important;  border: 1px solid rgba(0,0,0,0.1) !important; border-radius: 7px !important;  padding: 10px 10px !important; background: #f1f1f1;}
 .headerWrapper .header .part2 .countryDrop{ text-align: left; justify-content: flex-start !important;}   
 .headerWrapper .header .part2 .countryDrop .lable{font-size: 12px !important; text-transform: capitalize !important;
-    color: rgba(0,0,0,0.7) !important; line-height: 16px;}
+    color: rgba(0,0,0,0.4) !important; line-height: 16px;}
 .headerWrapper .header .part2 .countryDrop .name{font-size: 14px !important; text-transform: capitalize !important;
-    color: rgba(0,0,0,0.7) !important; font-weight: 700; line-height: 16px;}
+    color: #6d4aae !important; font-weight: 700; line-height: 16px;}
 
 .headerWrapper .header .part2 .countryDrop span.ml-auto svg{opacity: 0.7;}
 
@@ -110,7 +110,7 @@ nav .navPart1 .catWrapper .sidebarNav ul li button{color: #000; width: 100%; jus
 
 nav .navPart1 .catWrapper .sidebarNav ul li button svg{font-size: 12px; opacity: 0.6;}
 
-nav .navPart1 .catWrapper .sidebarNav ul li button:hover{background: transparent !important;}
+nav .navPart1 .catWrapper .sidebarNav ul li button:hover{background: transparent !important; color: #7a55c1 !important;}
 
 nav .navPart1 .catWrapper .sidebarNav ul li{position: static;}
 nav .navPart1 .catWrapper .sidebarNav ul li .submenu{position: absolute; top: 0px; left: 105%; 
@@ -122,9 +122,9 @@ left: 100%;}
 
 nav .navPart1 .catWrapper .sidebarNav ul li .submenu button{border-radius: 0px !important;}
 
-nav .allCatTab{background: #2bbef9; padding: 10px 15px !important; border-radius: 30px !important;}
+nav .allCatTab{background: #6d4aae; padding: 10px 15px !important; border-radius: 30px !important;}
 nav .allCatTab *{color: #fff;}
-nav .allCatTab:hover{background: #2bbef9;}
+nav .allCatTab:hover{background: #7a55c1;}
 nav .allCatTab .text{font-weight: 600;}
 
 nav .allCatTab .icon1 svg{font-size: 20px !important;}
@@ -136,7 +136,7 @@ nav .navPart2 ul li a{text-decoration: none;}
 nav .navPart2 ul li a button{font-size: 14px !important; font-weight: 600; text-decoration: none; color: rgba(0,0,0,0.6); text-transform: uppercase; display: flex; align-items: center; padding: 8px 15px; transition: all 0.2s ease-in-out; border-radius: 25px;} 
 nav .navPart2 ul li a svg{font-size: 20px;}
 
-nav .navPart2 ul li a:hover{background: #f0faff; color: #2bbef9;}
+nav .navPart2 ul li a:hover{background: #f0faff; color: #7a55c1;}
 
 nav .navPart2 ul li{position: relative;}
 nav .navPart2 ul li .submenu{position: absolute; top: 150%; left: 0; min-width: 200px; background: #fff; opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out; z-index: 100;}
@@ -152,6 +152,22 @@ nav .navPart2 ul li:hover .submenu{opacity: 1; visibility: inherit; top: 100%;}
 .homeBannerSection .swiper .item{overflow: hidden; border-radius: 10px;}
 .homeBannerSection *{outline: none !important;}
 .homeBannerSection .slick-arrow{position: absolute; top: 45%; z-index: 100; display: flex; justify-content: center; align-items: center; width: 40px !important; height: 40px !important; border-radius: 100%;  font-weight: bold; box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important;}
+
+.homeBannerSection .swiper-button-prev,.homeBannerSection .swiper-button-next{
+    width: 40px;
+    height: 40px;
+    background: #fff !important;
+    border-radius: 50% !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+    opacity: 0.6;
+}
+
+.homeBannerSection .swiper-button-prev::after,.homeBannerSection .swiper-button-next::after{
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #000;
+    padding: 10px !important;
+}
 .homeBannerSection .slick-arrow.slick-next{right: 35px !important;}
 .homeBannerSection .slick-arrow.slick-prev{left: 35px !important;}
 
@@ -202,7 +218,7 @@ box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important; t
     .productItem .actions button svg{color: #000 !important; opacity: 0.8;
     pointer-events: none;font-size: 15px ;}
 
-    .productItem .actions button:hover{background: #233a95 !important;}
+    .productItem .actions button:hover{background: #6d4aae !important;}
     .productItem .actions button:hover svg{color: #fff !important;}
 
     .productItem .imgWrapper{overflow: hidden;}
@@ -247,7 +263,7 @@ box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important; t
 
 .sticky{position: sticky; top: 10px; z-index: 100;}
 
-.newsLetterSection{width: 100%; height: auto; background: #233a95; position: relative; overflow: hidden; padding: 70px 0px;}
+.newsLetterSection{width: 100%; height: auto; background-image: linear-gradient(to bottom right, #391e6b, #6d4aae);  position: relative; overflow: hidden; padding: 70px 0px;}
 .newsLetterSection .container-fluid{margin: 0 5%;}
 .newsLetterSection .col-md-6{position: static !important;}
 .newsLetterSection p{font-size: 18px; margin: 10px 0px !important;}
@@ -260,7 +276,7 @@ box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important; t
 .newsLetterSection form svg{position: absolute; top: 17px; left: 10px; font-size: 25px; opacity: 0.3;}
 .newsLetterSection form input{width: 100%; height: 100%; background: #fff !important; outline: none !important; border: 0px !important; padding-left: 40px; padding-right: 200px;}
 
-.newsLetterSection form button{position: absolute; top: 7px; right: 7px; background: #233a95 !important; font-size: 14px !important; padding: 10px 25px !important; color: #fff !important; text-transform: capitalize !important; font-weight: 600 !important;}
+.newsLetterSection form button{position: absolute; top: 7px; right: 7px; background: #6d48b3 !important; font-size: 14px !important; padding: 10px 25px !important; color: #fff !important; text-transform: capitalize !important; font-weight: 600 !important;}
 
 footer{width: 100%; height: 500px;margin: auto; background: #fff; padding: 35px 0px;}
 
@@ -278,8 +294,8 @@ footer .linksWrap ul li a:hover{text-decoration: none;}
 footer .copyright ul li a{display: flex; align-items: center; justify-content: center; width: 35px;
 height: 35px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.2);
 transition: all 0.3s;}
-footer .copyright ul li a svg{font-size: 16px; color: rgba(0,0,0,0.8);}
-footer .copyright ul li a:hover{background: #2bbef9 !important;}
+footer .copyright ul li a svg{font-size: 16px; color: #7a55c1;}
+footer .copyright ul li a:hover{background: #6d4aae !important;}
 footer .copyright ul li a:hover svg{color: #fff !important;}
 
 .productModal .MuiPaper-elevation{padding: 25px; position: relative; max-width: 900px !important;
