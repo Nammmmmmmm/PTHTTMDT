@@ -3,18 +3,30 @@ import { TfiFullscreen } from "react-icons/tfi";
 import pro1 from "../../assets/images/pro1.jpg";
 import Button from "@mui/material/Button";
 import { IoMdHeartEmpty } from 'react-icons/io';
+import { useContext, useState } from "react";
+import { MyContext } from '../../App';
 
 
 const ProductItem = () => {
+
+  const context = useContext(MyContext)
+
+  const viewProductDetails = (id) => {
+    context.setIsOpenProductModal(true);
+  }
+
+
+
   return (
-    <div className="item productItem">
+    <>
+      <div className="item productItem">
       <div className="imgWrapper">
         <img src={pro1} className="w-100" />
 
         <span className="badge badge-primary">10%</span>
 
         <div className='actions'>
-          <Button><TfiFullscreen/></Button>
+          <Button onClick={()=>viewProductDetails(1)}><TfiFullscreen/></Button>
           <Button><IoMdHeartEmpty style={{fontSize:'20px'}}/></Button>
         </div>
       </div>
@@ -36,7 +48,12 @@ const ProductItem = () => {
           <span className="netprice text-danger ml-3">$4500.00</span>
         </div>
       </div>
-    </div>
+    </div> 
+
+
+   
+    {/* <ProductModal/> */}
+    </>
   );
 };
 
