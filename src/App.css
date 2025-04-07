@@ -11,6 +11,7 @@ body{
     /* background-color: #f5f5f5; */
     color: rgba(0,0,0,0.8);
     overflow-x: hidden;
+    font-size: 16px;
 }
 .bg-blue{ background: #6d4aae;}
 
@@ -20,18 +21,21 @@ body{
     }
 }
 
-.badge{display: inline-block; padding: 7px 10px;}
+.badge{display: inline-block; padding: 7px 10px; border-radius: 20px;}
 .badge .bg-sucess{background: #e5f8ed !important; color: #16b858 !important;}
+.badge .badge-success{color: #00b853; background: #e5f8ed;}
 
 button{text-transform: capitalize !important;}
 
 .btn-blue{background: #6d4aae !important; color: #fff !important;
 text-transform: capitalize !important;}
-.btn-big{font-size: 15px !important; padding: 7px 30 x !important; min-width: auto !important;}
+.btn-big{font-size: 15px !important; padding: 7px 30px !important; min-width: auto !important;}
 .btn-round{border-radius: 30px !important;}
 
 .btn-sml{font-size: 12px !important; color: #000; text-transform: capitalize !important;}
 .btn-sml svg{font-size: 20px;}
+
+.btn-circle{border-radius: 50% !important; min-width: auto !important;}
 
 .cursor{cursor: pointer;}
 .text-light{color: #626262 !important;}
@@ -205,10 +209,10 @@ left: 10px; z-index: 100;}
 .productItem .info{padding: 15px;}
 .productItem .info h4{font-size: 15px; font-weight: 600;}
 
- .info .oldPrice{font-size: 16px; font-weight: bold; color: rgba(0,0,0,0.2); text-decoration: line-through;}
+ .info .oldPrice{font-size: 16px !important; font-weight: bold; color: rgba(0,0,0,0.2); text-decoration: line-through;}
  .info .oldPrice .lg{font-size: 20px;}
 
- .info .netPrice{font-size: 16px; font-weight: bold;}
+ .info .netPrice{font-size: 16px !important; font-weight: bold;}
  .info .netPrice .lg{font-size: 20px;}
 
 .productItem .actions{position: absolute; top: 20px; right: -100%; z-index: 1000; display: flex;
@@ -283,14 +287,15 @@ box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important; t
 
 .newsLetterSection form button{position: absolute; top: 7px; right: 7px; background: #6d48b3 !important; font-size: 14px !important; padding: 10px 25px !important; color: #fff !important; text-transform: capitalize !important; font-weight: 600 !important;}
 
-footer{width: 100%; height: 500px;margin: auto; background: #fff; padding: 35px 0px;}
+footer{width: 100%; height: 500px; margin: auto; background: #fff; padding: 35px 0px;}
 
-footer .topInfo{border-bottom: 1px solid rgba(0, 0, 0, 0.1); padding-bottom: 20px;}
+footer .topInfo{border-bottom: 1px solid rgba(0, 0, 0, 0.1); padding-bottom: 20px; margin: 0 5%;}
 footer .topInfo .col{padding: 10px 15px; padding-left: 40px; border-right: 1px solid rgba(0,0,0,0.2);}
 footer .topInfo .col:last-child{border-right: 0px;}
 footer .topInfo .col svg{font-size: 26px;}
 footer .topInfo .col span{font-size: 13px; font-weight: 600;}
 
+footer .linksWrap, footer .copyright{margin: 0 5%;}
 footer .linksWrap h5{font-size: 15px; margin-bottom: 20px; font-weight: 600;}
 footer .linksWrap ul li{list-style: none; margin-bottom: 10px;}
 footer .linksWrap ul li a{color: #71778e; font-size: 13px;}
@@ -328,6 +333,9 @@ border-radius: 15px; cursor: pointer;}
 .quantityDrop{width: 150px;gap: 10px;}
 .quantityDrop button{min-width: 40px !important; width: 40px !important; height: 40px !important;
 border-radius: 50% !important; background: #edeef5 !important; border: 1px solid rgba(0, 0, 0, 0.1) !important; color: #000;}
+
+.quantityDrop button:hover{background: #bcbcbc !important;}
+
 .quantityDrop button svg{ color: #000 !important;}
 
 .quantityDrop input{width: 100%; border: 0px; background: transparent; outline: none !important;text-align: center;}
@@ -359,7 +367,7 @@ border-radius: 50% !important; background: #edeef5 !important; border: 1px solid
 
 
 .range-slider{height: 5px !important;}
-.range-slider .range-slider__thumb, .range-slider .range-slider__range{background : #000 !important;}
+.range-slider .range-slider__thumb, .range-slider .range-slider__range{background : #6d48b3 !important;}
 
 .range-slider .range-slider__thumb{width: 15px !important; height: 15px !important;}
 
@@ -391,3 +399,66 @@ border-radius: 50% !important; background: #edeef5 !important; border: 1px solid
 .productListing .productItem.one .actions button{visibility: hidden;} 
 
 .css-1c5o7vy-MuiPagination-ul{justify-content: center !important;}
+
+.section{padding: 45px 0px;}
+.productDetails{margin: 0 5%;}
+.productDetails h2.hd{font-size: 26px;}
+.productDetails h3.hd{font-size: 18px !important;}
+
+.productDetails .oldPrice{font-size: 20px; margin-right: 5px;}
+.productDetails .netPrice{font-size: 22px;}
+
+.productSize{width: 100%; height: auto; padding: 25px 0px;}
+.productSize ul li{margin-right: 10px !important;}
+.productSize ul li a{display: flex; align-items: center; justify-content: center; padding: 5px 10px !important; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 5px !important; cursor: pointer; text-decoration: none !important; color: #000; font-size: 14px !important; transition: all 0.1s ease-in-out;}
+
+.productSize ul li a:hover{background: #ececec;}
+.productSize ul li a.active{background: #6d4aae !important; color: #fff !important;}
+
+.productDetails .btn-circle{
+    min-width: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background: #edeef5 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: #000;
+    padding: 5px !important;
+}
+
+.productDetails .btn-circle svg{
+    color: #000 !important;
+    opacity: 0.8;
+    font-size: 18px;
+}
+
+.productDetails .btn-circle:hover{
+    background: #ccc !important;
+}
+
+.product-tabs .nav-link {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6d4aae;
+  }
+  
+  .product-tabs .nav-link.active {
+    color: #614596;
+    background-color: #f8f9fa;
+    border-color: #dee2e6 #dee2e6 #fff;
+  }
+  
+  .tab-content-custom {
+    border: 1px solid #dee2e6;
+    border-top: none;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+    margin-top: -1px;
+  }
+  .tab-content-custom li {
+    margin-bottom: 10px;
+    list-style: none;
+  }
+  

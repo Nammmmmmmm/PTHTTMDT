@@ -9,7 +9,7 @@ import { FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="container">
+    <footer className="container-fluid">
         <div className='topInfo row'>
             <div className='col d-flex align-items-center'>
                 <span><LuShirt/></span>
@@ -35,7 +35,7 @@ const Footer = () => {
             
         </div>
 
-        <div className='row mt-5 linksWrap'>
+        <div className='row linksWrap'>
                 <div className='col'>
                     <h5>FRUITS & VEGETABLES</h5>
                     <ul>
