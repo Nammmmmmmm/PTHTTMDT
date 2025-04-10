@@ -10,7 +10,7 @@ import { FaHeart } from "react-icons/fa";
 import { MdOutlineCompareArrows } from "react-icons/md";
 import { MyContext } from "../../App";
 import ProductZoom from "../ProductZoom";
-
+import { IoCartSharp } from "react-icons/io5";
 
 
 const ProductModal = (props) => {
@@ -77,7 +77,7 @@ const ProductModal = (props) => {
             <div className="d-flex align-items-center">
               <QuantityBox />
 
-              <Button className="btn-blue btn-lg btn-big btn-round ml-3">
+              <Button className="btn-blue btn-lg btn-big btn-round ml-3"><IoCartSharp/>
                 Add to Cart
               </Button>
             </div>
