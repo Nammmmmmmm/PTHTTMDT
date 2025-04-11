@@ -10,7 +10,6 @@ import { useContext } from "react";
 import { MyContext } from "../../App";
 
 const Header = () => {
-  
   const context = useContext(MyContext);
 
   return (
@@ -32,17 +31,22 @@ const Header = () => {
               </div>
 
               <div className="col-sm-10 d-flex align-items-center part2">
-
-                {
-                  context.countryList.length !== 0 && <CountryDropdown />
-                }
+                {context.countryList.length !== 0 && <CountryDropdown />}
 
                 <SearchBox />
 
                 <div className="part3 d-flex align-items-center ml-auto">
-                  <Button className="circle mr-3">
-                    <FiUser />
-                  </Button>
+                  {context.isLogin !== true ? (
+                    <Link to={"/signIn"}>
+                      <Button className="btn-blue btn-round mr-3">
+                        Sign In
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button className="circle mr-3">
+                      <FiUser />
+                    </Button>
+                  )}
                   <div className="ml-auto cartTab d-flex align-items-center">
                     <span className="price">$10</span>
                     <div className="position-relative ml-2">
@@ -61,8 +65,6 @@ const Header = () => {
         </header>
 
         <Navigation />
-        
-
       </div>
     </>
   );
